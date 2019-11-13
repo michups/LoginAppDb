@@ -1,0 +1,21 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="insert" author="michups">
+        <insert schemaName="public"
+                tableName="user">
+<!--            <column name="id" type="SERIAL" value="1"/>-->
+            <column name="username" type="varchar(50)" value="admin"/>
+            <column name="password" type="varchar(50)" value="pa33word"/>
+            <column name="quote" type="varchar(50)" value="I am master of app"/>
+            <column name="admin" type="boolean" value="t"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="tag-1.3" author="michups">
+        <tagDatabase tag="1.3"/>
+    </changeSet>
+
+</databaseChangeLog>
